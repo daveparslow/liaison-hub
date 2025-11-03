@@ -34,15 +34,15 @@ Add to your MCP client configuration:
 
 ### Available Tools
 
-#### `delegate_task`
+#### `delegate`
 
 Delegate a long-running task to a sub-agent.
 
 **Parameters:**
-- `task` (string, required): Description of the task to delegate
-- `context` (string, optional): Context and requirements for the task
+- `task` (string, required): Description of the task to delegate (max 5000 chars)
+- `context` (string, optional): Context and requirements for the task (max 50000 chars)
 
-**Returns:** Task ID and delegation status
+**Returns:** Task ID, status, and delegation confirmation
 
 #### `check_status`
 
@@ -51,7 +51,26 @@ Check the status of a delegated task.
 **Parameters:**
 - `taskId` (string, required): The ID of the task to check
 
-**Returns:** Current task status and progress information
+**Returns:** Current task status, progress, and result/error information
+
+#### `list_tasks`
+
+List all tasks with optional filtering.
+
+**Parameters:**
+- `status` (string, optional): Filter by status (pending, in_progress, completed, failed, cancelled)
+- `limit` (number, optional): Maximum number of tasks to return (default: 10, max: 100)
+
+**Returns:** Array of tasks with their current status
+
+#### `cancel_task`
+
+Cancel a pending or in-progress task.
+
+**Parameters:**
+- `taskId` (string, required): The ID of the task to cancel
+
+**Returns:** Cancellation confirmation and updated task status
 
 ## Development
 
