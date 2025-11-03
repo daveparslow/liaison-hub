@@ -16,6 +16,19 @@ build/
 .next/
 .turbo/
 
+# TypeScript build artifacts
+*.tsbuildinfo
+
+# Generated config files (keep source .ts files)
+packages/**/vitest.config.js
+packages/**/vitest.config.d.ts
+packages/**/vitest.config.d.ts.map
+packages/**/vitest.config.js.map
+packages/**/*.config.js
+packages/**/*.config.d.ts
+packages/**/*.config.js.map
+packages/**/*.config.d.ts.map
+
 # Logs
 logs
 *.log
@@ -35,6 +48,7 @@ lerna-debug.log*
 !.vscode/launch.json
 !.vscode/settings.json
 !.vscode/tasks.json
+!.vscode/mcp.json
 .idea/
 *.swp
 *.swo

@@ -1,6 +1,62 @@
 # Liaison Hub
 
-Liaison — a primary MCP server (with a bundled VS Code extension) for delegating long-running jobs to sub-agents, streaming check-ins, and handing off prompt-in → summary-out context.
+# MCP Liaison
+
+An **MCP (Model Context Protocol)** server for managing distributed, asynchronous workloads.
+
+## Features
+
+- **Task Delegation**: Queue and execute long-running tasks  
+- **Smart Tracking**: Persistent state, auto-recovery, and progress  
+- **Built-In Limits**: Configurable concurrency and timeouts  
+- **Type-Safe**: Full TypeScript with Zod schemas  
+
+For more details, see the dedicated package at [packages/mcp-liaison](./packages/mcp-liaison).
+
+## Quick Start
+
+```bash
+# Install dependencies
+pnpm install
+
+# Build
+pnpm build
+
+# Test
+pnpm test
+
+# Lint
+pnpm lint
+```
+
+## Project Structure
+
+```
+liaison-hub/
+├── packages/
+│   └── mcp-liaison/          # Main MCP server package
+│       ├── src/
+│       │   ├── index.ts      # Server implementation
+│       │   └── __tests__/    # Test suite
+│       ├── docs/             # Documentation
+│       └── README.md         # Package README
+├── package.json              # Root workspace config
+├── turbo.json               # Turbo build config
+└── pnpm-workspace.yaml      # PNPM workspace config
+```
+
+## Development
+
+This project uses:
+- **pnpm** - Fast, disk-efficient package manager
+- **Turbo** - High-performance build system
+- **TypeScript** - Type-safe development
+- **Vitest** - Fast unit testing
+- **ESLint** - Code quality
+
+## License
+
+MIT
 
 ## Prerequisites
 

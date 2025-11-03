@@ -1,0 +1,11 @@
+{
+  "servers": {
+    "liaison": {
+      "command": "node",
+      "args": [
+        "./packages/mcp-liaison/dist/index.js"
+      ],
+      "env": {}
+    }
+  }
+}
