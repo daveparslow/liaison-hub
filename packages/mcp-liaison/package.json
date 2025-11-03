@@ -1,12 +1,12 @@
 {
   "name": "@liaison-hub/mcp-liaison",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "MCP server for delegating long-running jobs to sub-agents with streaming check-ins",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
-    "mcp-liaison": "./dist/index.js"
+    "mcp-liaison": "dist/index.js"
   },
   "files": [
     "dist/**/*.js",
@@ -41,7 +41,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/daveparslow/liaison-hub.git",
+    "url": "git+https://github.com/daveparslow/liaison-hub.git",
     "directory": "packages/mcp-liaison"
   },
   "bugs": {
