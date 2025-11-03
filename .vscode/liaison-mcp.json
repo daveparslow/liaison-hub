@@ -1,0 +1,49 @@
+{
+  "mcpServers": {
+    "liaison": {
+      "command": "node",
+      "args": ["./packages/mcp-liaison/dist/index.js"],
+      "env": {
+        "LIAISON_MODEL_PROVIDER": "anthropic",
+        "ANTHROPIC_API_KEY": "${env:ANTHROPIC_API_KEY}",
+        "LIAISON_MODEL": "claude-3-5-sonnet-20241022",
+        "LIAISON_MAX_CONCURRENT_TASKS": "5",
+        "LIAISON_TASK_TIMEOUT_MS": "300000"
+      },
+      "disabled": false,
+      "alwaysAllow": []
+    },
+    "filesystem": {
+      "comment": "Available to liaison sub-agents for file operations",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "./workspace"],
+      "disabled": false,
+      "alwaysAllow": []
+    },
+    "brave-search": {
+      "comment": "Available to liaison sub-agents for web search",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-brave-search"],
+      "env": {
+        "BRAVE_API_KEY": "${env:BRAVE_API_KEY}"
+      },
+      "disabled": true,
+      "alwaysAllow": []
+    },
+    "fetch": {
+      "comment": "Available to liaison sub-agents for HTTP requests",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-fetch"],
+      "disabled": false,
+      "alwaysAllow": []
+    },
+    "memory": {
+      "comment": "Available to liaison sub-agents for persistent storage",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"],
+      "disabled": false,
+      "alwaysAllow": []
+    }
+  },
+  "defaultServer": "liaison"
+}
