@@ -1,5 +1,5 @@
 {
-  "name": "@liaison-hub/mcp-liaison",
+  "name": "mcp-liaison",
   "version": "0.1.0",
   "description": "MCP server for delegating long-running jobs to sub-agents with streaming check-ins",
   "type": "module",
