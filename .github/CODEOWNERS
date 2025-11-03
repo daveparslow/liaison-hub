@@ -1,0 +1,13 @@
+# Code Owners
+# These owners will be automatically requested for review when someone opens a pull request.
+
+# Global owners
+* @daveparslow
+
+# Package-specific owners
+/packages/mcp-liaison/ @daveparslow
+
+# CI/CD and configuration
+/.github/ @daveparslow
+*.yml @daveparslow
+*.json @daveparslow
