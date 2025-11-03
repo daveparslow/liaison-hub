@@ -39,11 +39,6 @@ Sub-agents spawned by liaison can access these MCP tool servers:
 - **Purpose**: Key-value storage for persistent data
 - **Status**: Enabled by default
 
-#### `brave-search`
-- **Purpose**: Web search capabilities
-- **Requires**: `BRAVE_API_KEY` environment variable
-- **Status**: Disabled by default (enable after adding API key)
-
 ## Setup
 
 ### 1. Set Environment Variables
@@ -53,9 +48,6 @@ Create a `.env` file in the project root:
 ```bash
 # Required
 ANTHROPIC_API_KEY=sk-ant-...
-
-# Optional
-BRAVE_API_KEY=BSA...
 ```
 
 ### 2. Build the Project
@@ -122,7 +114,6 @@ const result = await client.callTool("delegate", {
 │  │  - filesystem (read/write files)     │  │
 │  │  - fetch (HTTP requests)             │  │
 │  │  - memory (key-value storage)        │  │
-│  │  - brave-search (web search)         │  │
 │  └──────────────────────────────────────┘  │
 └─────────────────────────────────────────────┘
 ```
