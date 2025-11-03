@@ -2,12 +2,44 @@
 
 Liaison — a primary MCP server (with a bundled VS Code extension) for delegating long-running jobs to sub-agents, streaming check-ins, and handing off prompt-in → summary-out context.
 
+## Prerequisites
+
+### Node.js (via nvm)
+
+This project requires Node.js 18 or higher. We recommend using nvm to manage Node versions.
+
+**Windows:**
+```powershell
+# Install nvm-windows (requires admin privileges)
+winget install CoreyButler.NVMforWindows
+
+# Restart your terminal, then install Node 20:
+nvm install 20.19.0
+nvm use 20.19.0
+
+# Or use the helper script to read from .nvmrc:
+.\use-node.ps1
+```
+
+**macOS/Linux:**
+```bash
+# Install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+
+# Restart your terminal, then:
+nvm install
+nvm use
+```
+
+The project includes a `.nvmrc` file. macOS/Linux users can run `nvm use` to switch to the correct Node version automatically.
+
 ## Setup
 
 ```bash
 # Clone and install
-git clone https://github.com/YOUR_USERNAME/liaison-hub.git
+git clone https://github.com/daveparslow/liaison-hub.git
 cd liaison-hub
+nvm use          # Use Node version from .nvmrc
 corepack enable
 pnpm install
 ```
